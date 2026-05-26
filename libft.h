@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 10:17:41 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/26 10:59:30 by crubio-p         ###   ########.fr       */
+/*   Created: 2026/05/26 10:46:52 by crubio-p          #+#    #+#             */
+/*   Updated: 2026/05/26 10:58:40 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
-{
-	return (
-		c >= 'A' && c <= 'Z'
-		|| c >= 'a' && c <= 'z'
-		|| c >= '0' && c <= '9'
-	);
-}
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stddef.h>
+
+int		ft_isalpha(int c);
+
+size_t	ft_strlen(const char *string);
+
+#endif
