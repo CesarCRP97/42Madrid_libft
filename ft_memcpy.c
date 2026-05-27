@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 12:18:59 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/27 10:54:26 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/05/27 11:18:06 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (dest);
-}
-
-int	main(void)
-{
-	ft_memcpy(((void *)0), ((void *)0), 3);
-	return (0);
 }
