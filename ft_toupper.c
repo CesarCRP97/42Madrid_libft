@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 13:23:17 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/28 14:29:36 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:45:14 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_toupper(int c)
 {
-	return (c - 32);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	else
+		return (c);
 }
