@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 13:42:23 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/28 14:29:25 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:33:19 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int		i;
 	char	c_to_char;
 
+	i = 0;
 	c_to_char = (char)c;
 	while (s[i] != '\0')
 	{
