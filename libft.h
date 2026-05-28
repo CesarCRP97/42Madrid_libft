@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 10:46:52 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/28 14:46:43 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/05/28 16:45:40 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		*ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
