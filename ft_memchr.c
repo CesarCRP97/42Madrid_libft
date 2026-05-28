@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:44:29 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/28 23:53:40 by cesar            ###   ########.fr       */
+/*   Created: 2026/05/28 23:24:30 by cesar             #+#    #+#             */
+/*   Updated: 2026/05/28 23:28:40 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+    unsigned char   *to_char;
+    size_t          i;
 
-	i = 0;
-	while (s1[i] && s2[i] && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	if (i == n && n > 0)
-		return (s1[i - 1] - s2[i - 1]);
-	else if (i == n && n == 0)
-		return (0);
-	return (s1[i] - s2[i]);
+    to_char = (unsigned char *)s;
+    i = 0;
+    while (i < n)
+    {
+        if (to_char[i] == (unsigned char)c)
+            return ((void *)&to_char[i]);
+        i++;
+    }
+    return (NULL);
 }

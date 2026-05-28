@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:44:29 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/28 23:53:40 by cesar            ###   ########.fr       */
+/*   Created: 2026/05/28 23:55:06 by cesar             #+#    #+#             */
+/*   Updated: 2026/05/28 23:55:34 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
 
-	i = 0;
-	while (s1[i] && s2[i] && i < n)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	if (i == n && n > 0)
-		return (s1[i - 1] - s2[i - 1]);
-	else if (i == n && n == 0)
-		return (0);
-	return (s1[i] - s2[i]);
 }
