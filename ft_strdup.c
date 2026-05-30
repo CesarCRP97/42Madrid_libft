@@ -6,13 +6,13 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 19:30:40 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/30 19:42:26 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/05/30 19:50:42 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_substr(const char *s)
 {
 	int		i;
 	char	*dup;
