@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/30 13:33:26 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/30 15:46:20 by crubio-p         ###   ########.fr       */
+/*   Created: 2026/05/30 19:30:40 by crubio-p          #+#    #+#             */
+/*   Updated: 2026/05/30 19:42:26 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*strdup(const char *s)
 {
-	int	i;
-	int	sign;
-	int	nbr;
+	int		i;
+	char	*dup;
 
+	dup = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
 	i = 0;
-	sign = 1;
-	nbr = 0;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if (nptr[i] == '-')
+	while (s[i])
 	{
-		sign = -sign;
+		dup[i] = s[i];
 		i++;
 	}
-	while (ft_isdigit(nptr[i]))
-	{
-		nbr = nbr * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (nbr * sign);
+	dup[i] = '\0';
+	return (dup);
 }

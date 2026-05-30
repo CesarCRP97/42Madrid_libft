@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 10:46:52 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/30 13:32:59 by cesar            ###   ########.fr       */
+/*   Updated: 2026/05/30 19:43:38 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -36,5 +37,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif
