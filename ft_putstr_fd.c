@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:11:24 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 17:26:27 by cesar            ###   ########.fr       */
+/*   Updated: 2026/05/31 23:30:47 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	// if (!s)
-	// 	return ;
-	// write(fd, s, ft_strlen(s));
-	
+	if (!s)
+		return ;
+	while (*s)
+		ft_putchar_fd(*s++, fd);
 }

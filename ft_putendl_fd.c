@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:12:42 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 00:12:56 by cesar            ###   ########.fr       */
+/*   Updated: 2026/05/31 23:28:26 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

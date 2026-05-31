@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 23:06:59 by cesar            ###   ########.fr       */
+/*   Updated: 2026/05/31 23:32:10 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	**ft_free(char **tab, size_t n)
 
 static void	ft_split_str(char **array, char *str, char c, size_t n)
 {
-	int	i;
+	int		i;
 	char	*start;
 
 	i = 0;
@@ -65,11 +65,10 @@ static void	ft_split_str(char **array, char *str, char c, size_t n)
 	}
 }
 
-
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int 	n_words;
+	int		n_words;
 
 	if (!s)
 		return (NULL);
