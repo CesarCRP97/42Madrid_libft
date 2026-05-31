@@ -6,7 +6,7 @@
 /*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 00:05:41 by cesar            ###   ########.fr       */
+/*   Updated: 2026/05/31 23:06:59 by cesar            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,57 +21,62 @@ static int	ft_count_words(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if ((i == 0 && s[i] == c) || (s[i] != c && s[i - 1] == c))
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-static char	**ft_free(char **tab, int i)
+static char	**ft_free(char **tab, size_t n)
 {
-	while (i >= 0)
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
 		free(tab[i]);
-		i--;
+		i++;
 	}
 	free(tab);
 	return (NULL);
 }
 
-static size_t	ft_word_len(char const *s, char c)
+static void	ft_split_str(char **array, char *str, char c, size_t n)
 {
-	size_t	len;
+	int	i;
+	char	*start;
 
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	return (len);
+	i = 0;
+	while (i < n)
+	{
+		while (*str && *str == c)
+			str++;
+		start = str;
+		while (*str && *str != c)
+			str++;
+		array[i] = ft_substr(start, 0, str - start);
+		if (!array[i])
+		{
+			ft_free(array, i);
+			return ;
+		}
+		i++;
+	}
 }
+
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	size_t	nbr_words;
-	size_t	i;
-	size_t	act_word_len;
+	int 	n_words;
 
-	nbr_words = ft_count_words(s, c);
-	if (!nbr_words)
+	if (!s)
 		return (NULL);
-	array = malloc(sizeof(char *) * (nbr_words + 1));
+	n_words = ft_count_words(s, c);
+	array = (char **)calloc((n_words + 1), sizeof(char *));
 	if (!array)
 		return (NULL);
-	i = 0;
-	while (*s)
-	{
-		while (*s == c)
-			s++;
-		act_word_len = ft_word_len(s, c);
-		array[i] = ft_substr(s, 0, act_word_len);
-		s += act_word_len;
-		i++;
-	}
-	array[nbr_words] = NULL;
+	ft_split_str(array, (char *)s, c, n_words);
 	return (array);
 }
