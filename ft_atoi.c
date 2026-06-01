@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 13:33:26 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/30 15:46:20 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/01 11:57:18 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ int	ft_atoi(const char *nptr)
 	nbr = 0;
 	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		sign = -sign;
+		if (nptr[i] == '-')
+			sign = -sign;
 		i++;
 	}
 	while (ft_isdigit(nptr[i]))
