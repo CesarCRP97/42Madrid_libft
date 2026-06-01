@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 20:19:20 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/05/30 20:34:25 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/01 12:11:38 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
-	if (!s1 || !s2)
+	str = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -27,11 +28,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[i] = s1[i];
 		i++;
 	}
-	while (s2[i])
+	while (s2[j])
 	{
 		str[i + j] = s2[j];
 		j++;
 	}
-	str[i + j] = '\0';
 	return (str);
 }

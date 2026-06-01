@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 23:32:10 by cesar            ###   ########.fr       */
+/*   Updated: 2026/06/01 11:21:59 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	**ft_free(char **tab, size_t n)
 
 static void	ft_split_str(char **array, char *str, char c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*start;
 
 	i = 0;
