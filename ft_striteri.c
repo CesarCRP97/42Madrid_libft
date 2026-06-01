@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:09:51 by cesar             #+#    #+#             */
-/*   Updated: 2026/06/01 11:11:41 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/01 14:03:58 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		(f)(i, s);
+		(f)(i, &s[i]);
+		i++;
 	}
 }
