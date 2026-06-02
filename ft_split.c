@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/06/01 11:21:59 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/02 11:23:28 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	n_words = ft_count_words(s, c);
-	array = (char **)calloc((n_words + 1), sizeof(char *));
+	array = (char **)ft_calloc((n_words + 1), sizeof(char *));
 	if (!array)
 		return (NULL);
 	ft_split_str(array, (char *)s, c, n_words);
