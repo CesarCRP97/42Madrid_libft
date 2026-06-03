@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 20:35:27 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/06/02 11:21:42 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/02 13:51:50 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ft_substr(s1, start, end - start + 1));
 }
+

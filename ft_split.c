@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/06/02 11:26:54 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/03 10:35:48 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	ft_split_str(char **array, char *str, char c, size_t n)
 		while (*str && *str != c)
 			str++;
 		array[i] = ft_substr(start, 0, str - start);
-		if (!array[i])
+		if (array[i] == NULL)
 		{
 			ft_free(array, i);
 			return ;
