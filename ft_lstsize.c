@@ -6,13 +6,13 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 12:01:20 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/06/03 12:32:35 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:04:49 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 

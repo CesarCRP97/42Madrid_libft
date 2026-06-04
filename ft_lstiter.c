@@ -6,13 +6,13 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 15:33:59 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/06/03 15:50:28 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/04 11:00:22 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
 	{

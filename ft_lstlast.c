@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 12:22:06 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/06/03 12:40:44 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/04 10:05:20 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst->next != NULL)
+	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
 }
