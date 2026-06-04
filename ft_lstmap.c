@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 15:53:46 by crubio-p          #+#    #+#             */
-/*   Updated: 2026/06/04 11:01:27 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/04 11:06:06 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (lst != NULL)
 	{
-		lst_front = ft_lstnew(lst->content);
+		lst_front = ft_lstnew((f)(lst->content));
 		actual = lst_front;
 		lst = lst->next;
 		while (lst != NULL)
