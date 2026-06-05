@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:06:31 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 23:26:45 by cesar            ###   ########.fr       */
+/*   Updated: 2026/06/05 14:02:05 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_num_len(int n)
 	long	num;
 
 	num = n;
-	len = (n <= 0);
+	len = (num <= 0);
 	while (num)
 	{
 		num = num / 10;
