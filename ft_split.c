@@ -6,7 +6,7 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 23:43:25 by cesar             #+#    #+#             */
-/*   Updated: 2026/06/03 10:35:48 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/05 12:02:16 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	**ft_free(char **tab, size_t n)
 	return (NULL);
 }
 
-static void	ft_split_str(char **array, char *str, char c, size_t n)
+static char	**ft_split_str(char **array, char *str, char c, size_t n)
 {
 	size_t	i;
 	char	*start;
@@ -58,11 +58,11 @@ static void	ft_split_str(char **array, char *str, char c, size_t n)
 		array[i] = ft_substr(start, 0, str - start);
 		if (array[i] == NULL)
 		{
-			ft_free(array, i);
-			return ;
+			return (ft_free(array, i));
 		}
 		i++;
 	}
+	return (array);
 }
 
 char	**ft_split(char const *s, char c)
@@ -76,6 +76,6 @@ char	**ft_split(char const *s, char c)
 	array = (char **)ft_calloc((n_words + 1), sizeof(char *));
 	if (!array)
 		return (NULL);
-	ft_split_str(array, (char *)s, c, n_words);
+	array = ft_split_str(array, (char *)s, c, n_words);
 	return (array);
 }
