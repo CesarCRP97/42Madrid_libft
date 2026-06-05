@@ -49,8 +49,6 @@ SRC = ft_isalpha.c \
 	ft_lstiter.c \
 	ft_lstmap.c 
 
-
-
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
@@ -66,5 +64,4 @@ fclean: clean
 
 re: fclean all
 
-#duda
 .PHONY: all clean fclean re
