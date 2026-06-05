@@ -58,8 +58,6 @@ $(NAME): $(OBJ)
 
 all: $(NAME)
 
-bonus: all
-
 clean:
 	@rm -f $(OBJ)
 
