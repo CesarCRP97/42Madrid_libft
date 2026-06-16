@@ -6,27 +6,33 @@
 /*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:13:12 by cesar             #+#    #+#             */
-/*   Updated: 2026/06/02 11:40:33 by crubio-p         ###   ########.fr       */
+/*   Updated: 2026/06/16 11:54:45 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(int n, int fd)
 {
 	long int	nbr;
+	int			count;
 
 	nbr = n;
+	count = 0;
 	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);
+		count++;
 		nbr = -nbr;
 	}
 	if (nbr > 9)
 	{
-		ft_putnbr_fd(nbr / 10, fd);
-		ft_putnbr_fd(nbr % 10, fd);
+		count += ft_putnbr_fd(nbr / 10, fd);
+		count += ft_putnbr_fd(nbr % 10, fd);
 	}
 	else
-		ft_putchar_fd(nbr + '0', fd);
+	{
+		count += ft_putchar_fd(nbr + '0', fd);
+	}
+	return (count);
 }

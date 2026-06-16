@@ -3,19 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cesar <cesar@student.42.fr>                +#+  +:+       +#+        */
+/*   By: crubio-p <crubio-p@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 00:11:24 by cesar             #+#    #+#             */
-/*   Updated: 2026/05/31 23:30:47 by cesar            ###   ########.fr       */
+/*   Updated: 2026/06/16 11:53:48 by crubio-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
+	int	count;
+	int	write_result;
+
+	count = 0;
 	if (!s)
-		return ;
+		return (-1);
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+	{
+		write_result = ft_putchar_fd(*s++, fd);
+		if (write_result == -1)
+			return (-1);
+		count += write_result;
+	}
+	return (count);
 }
